@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content = "Enquiries about products">
+	<meta name = "keywords" content="fix, problem, broken, product">
+	<title>Products Enquiry</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+	<header>
+		<nav>         
+			<p><a class="help" href="./enhancements.html">Enhancement</a></p>
+			<p><a href="enquire.html">Enquire</a></p>
+            <p><a href="about.html">About</a></p>
+            <p><a href="product.html">Products</a></p>     
+            <p><a href="index.html">Home</a></p>
+			<p><a href="https://youtu.be/XH0w9a2pGkY">Youtube</a></p>
+		</nav>
+	</header>
+	<section id = "enquirepart"> 
+		<h1> PRODUCT ENQUIRY </h1>
+		<h3 class = "enquirepartdiscription">This is where all your problems or questions will be fully solved and elaborated by us. If you have any, please feel free to fill in the enquiry form down below:</h3>
+		<form id="survey" method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+			<fieldset>
+				<legend>Personal Information</legend>
+				<p>
+				
+					<label for="fname">First Name</label>
+					<br>
+					<input type="text" name="First_name" id="fname" maxlength="25" required="required">
+					<br>
+					<label for="lname">Last Name</label>
+					<br>
+					<input type="text" name="Last_name" id="lname" maxlength="25" required="required">
+				</p>
+				<p>
+					<br>
+					<label for="emailadd">Email Address</label>
+					<br>
+					<input type="email" name="Email" id="emailadd" required="required">
+				</p>
+				<p>
+					<br>
+					<label for="phonenum"> Phone Number</label>
+					<br>
+					<input type="text" name="Phone_number" id="phonenum" pattern="[0-9]{10}" placeholder="Enter your phone number" required="required">
+				</p>
+			</fieldset>
+			<fieldset class = "fieldset">
+				<legend>Address</legend>
+				<div>
+					<ol type="i">
+						<li>
+							<label for="straddress"> Street Address</label>
+							<br>
+							<input type="text" name="Street" id="straddress" maxlength="40" required="required">
+						</li>
+						<li>
+							<label for="sburb"> Suburb/Town</label>
+							<br>
+							<input type="text" name="Suburb/town" id="sburb" maxlength="20" required="required">
+						</li>
+						<li>
+							<label for="state">State</label>
+							<br>
+							<select id="state" required="required">
+								<option value =""></option>
+								<option value ="VIC">VIC</option>
+								<option value ="NSW">NSW</option>
+								<option value ="QLD">QLD</option>
+								<option value ="NT">NT</option>
+								<option value ="WA">WA</option>
+								<option value ="SA">SA</option>
+								<option value ="TAS">TAS</option>
+								<option value ="ACT">ACT</option>
+							</select>
+						</li>
+						<li>
+							<label for="pcode">Postcode</label>
+							<br>
+							<input type="text" name="Postcode" id="pcode" pattern="\d{4}" maxlength="4" required="required">
+						</li>
+
+					</ol>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Preferred contact</legend>
+				<div class = "fieldset1">
+					<label for="email">Email</label>
+					<input type="radio" name="preferred_contact" id="email" value="Email" checked = "checked">
+					<label for="phone">Phone</label>
+					<input type="radio" name="preferred_contact" id="phone" value="Phone">
+					<label for="post">Email</label>
+					<input type="radio" name="preferred_contact" id="post" value="Post">
+				</div>
+				
+			</fieldset>
+			<fieldset class = "fieldset">
+				<legend>About our Products</legend>
+				<p>
+					<label for="prod">Product</label>
+					<select id="prod" required="required">
+						<option value = "">Dell</option>
+						<option value = "HP">HP</option>
+						<option value = "macbook">Macbook</option>
+						<option value = "asus">ASUS</option>
+						<option value = "LG">LG</option>
+					</select>
+				</p>
+				<p> Range of Features <br>
+					<br>
+					<label for="fe1">Feature1</label>
+					<input type="checkbox" name="Feature" value="Feature1" id="fe1">
+					<label for="fe2">Feature2</label>
+					<input type="checkbox" name="Feature" value="Feature2" id="fe2">
+					<label for="fe3">Feature3</label>
+					<input type="checkbox" name="Feature" value="Feature3" id="fe3">
+					<label for="fe4">Feature4</label>
+					<input type="checkbox" name="Feature" value="Feature4" id="fe4">
+				</p>
+				<p>
+					<p>Comment Field</p> 
+					<br>
+					<textarea rows="20" cols="50" placeholder="Write down your interests or issues here..." required="required"></textarea>
+				</p>
+			</fieldset>
+				<input type="submit" name="Submit">
+				<input type="reset" name="Reset">
+		</form>
+	</section>
+	<footer>
+        <div class = "footer1">
+            <a class = "footer">Member:</a>
+            <br>
+            <a class = "footer" href="mailto:103487949@student.swin.edu.au">103487949 - Xuan Dat Le</a>
+            <br>
+            <a class = "footer" href="mailto:103793756@student.swin.edu.au">103793756 - Samer</a>
+            <br>
+            <a class = "footer" href="mailto:103827804@student.swin.edu.au">103827804 - The Son Ngo</a>
+            <br>
+            <a class = "footer" href="mailto:104048305@student.swin.edu.au">104048305 - Tuan Hung Nguyen</a>
+            <br>
+            <a class = "footer" href="mailto:103800504@student.swin.edu.au">103800504 - Nguyen Khanh Nguyen</a>
+            <br> 
+            <br>
+            <a>Image from:</a>
+            <br>
+            <a>https://www.dell.com/en-au/shop/dell-laptops/sf/xps-laptops</a> 
+            <br>
+            <a>https://www.asus.com/au/</a> 
+            <br>
+            <a>https://www.apple.com/au/mac/</a>
+            <br>
+            <a>https://www.hp.com/</a>
+            <br>
+            <a>https://www.lg.com/us/laptops/lg-17Z990-RAAS8U1-ultra-slim-laptop</a>
+		</div>
+    </footer>
+</body>
+</html>

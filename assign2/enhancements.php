@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enhancements page of Assignment 1" />
+    <meta name="author" content="Samer SID: 103793756"/> 
+    <title>Enhancements</title>
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+<body>
+    <?php
+    	include("header.inc");
+    ?>
+
+    <div id="main-content">
+        <h1>&#9889; Enhancements &#9889;</h1>
+        <section class="enhancements" id="enh1">
+            <h2>Animated SVG Button &#x1f534;</h2>
+            <p>Instead of the usual boring button, we decided to incorporate something a little bit more flashy and complex.
+                In order to implement this, we used the HTML <strong><code>&lt;svg&gt;</code></strong> element and the CSS <strong><code>:hover</code></strong> psuedo class.
+                This button was inspired by other creative designs that we found from <a href="https://dev.to/webdeasy/top-20-css-buttons-animations-f41"><strong>this</strong></a> article by <em>webdeasy.de</em> on dev.to.
+                Click <a href="index.html"><strong>here</strong></a> to view the button in our index.html page!
+                <br><br>
+                The svg <em>(Scalable Vector Graphics)</em> element allows us to display art without the need of assets. This means that the images
+                we create don't need to be loaded in by the client as the images are vector drawings created using geometry instead of the arrays of 
+                colored pixels that we get from JPG or PNG images. And as the svg images are drawn in real time, they are infinitely scalable as they are
+                just points relative to each other that can be recalculated many times, unlike regular image formats which would need to be scaled seperately
+                for different resolutions.
+                <br><br>
+                How the button was made: First, the width, height and cooridnate system of the art is declared using the viewBox attribute of the svg element.
+                Then to draw the path of our shape, we nest the <code>&lt;path&gt;</code> element within the svg element. The d <em>(draw)</em> attribute of the path element
+                allows us to input commands which in turn draw lines and curves to complete our wanted figure. After the icon is made, the :hover CSS pseudoclass attribute is used to
+                change various properties of the icon such as width, border, background, color and placement. This is all done with a specific transition time to make the transition upon 
+                hovering look smoother.
+                <br><br>
+                Here is a simple example with the code (Try Hovering!):
+            </p>
+                <br>
+                <svg id="example-icon" width="100px" height="100px" viewBox="0 0 400 400">
+                    <path d="M 100 100 L 300 100 L 200 300 z"></path>
+                </svg>
+                <fieldset>
+                    <legend>HTML</legend>
+                <code>
+                    &lt;svg width="100px" height="100px" viewBox="0 0 400 400"&gt; <br>
+                    &nbsp; &nbsp; &lt;path d="M 100 100 L 300 100 L 200 300 z"&gt; <br>
+                    &lt;/svg&gt;
+                </code>
+                </fieldset>
+                <fieldset>
+                    <legend>CSS</legend>
+                <code>
+                    .example-icon {transition: transform 1s;}
+                    <br>
+                    .example-icon:hover {transform: rotate(360deg);}
+                </code>
+                </fieldset>
+        </section>
+        <section class="enhancements" id="enh2">
+            <h2>Keyframe Slideshow &#x1F306;</h2>
+            <p>In the Home page of our website, like real computer retail stores, we wanted to display a few of our products to give the user a feel of what
+                the website is about. Initially, we uploaded a few pictures of the products next to each other however, the website felt outdated and uninteresting.
+                So, after researching we decided that a more modern and innovative approach to display our products would be by making a <strong><em>Slideshow</em></strong>.
+                Click <a href="index.html"><strong>here</strong></a> to view the slideshow!
+                <br><br>
+                In order to achieve this we used the CSS <code><strong>@keyframes</strong></code> rule. The @keyframes rule is used to specify animation. We can use it
+                to gradually change from one set of CSS rules to many throughout the animation period.
+                <br><br>
+                How the slideshow was made: First, a group of product images were stacked. The first image is set to have relative positioning to it's normal flow
+                and the other four images were set to absolute positioning. Then, five @keyframes rules were made for each of the picture. The attribtues set were 25s, linear and infinite; 
+                this specifies that the total animation of the slideshow of the five pictures will go on for 25s, the changes will be in linear time and that it will run infinitely (in a loop).
+                After the attributes were set, the rule for each image was set to be visible for 20% of the time. This creates a slideshow which shows each image for 5 seconds and creates a 
+                smooth transition between the images. In addition to the transitions, another @keyframes rule was implemented to slowly zoom out of the image by changing the total width of the 
+                image over a period of time, this gives the feeling of immersion which increases the charm of the slideshow.
+                <br><br>
+                The @keyframes rule was also used in our website to create more ambient titles that you can view <a href="product.html"><strong>here</strong></a>.
+                <br><br>
+                Here is a simple example with the code:
+            </p>
+                <br><br>
+                <h3 id="example-title">LOOK AT ME CHANGE COLORS!</h3>
+                <fieldset>
+                    <legend>HTML</legend>
+                <code>
+                    &lt;h3 id="example-title"&gt;LOOK AT ME CHANGE COLORS!&lt;/h3&gt;
+                </code>
+                </fieldset>
+                <fieldset>
+                    <legend>CSS</legend>
+                <code>
+                    #example-title { <br>
+                        &nbsp;animation: example-color-change 0.5s linear infinite alternate-reverse;<br>
+                    }<br>
+                    
+                    @keyframes example-color-change {<br>
+                        &nbsp;0% {<br>
+                            &nbsp;&nbsp;    color: red;<br>
+                            &nbsp;}<br>
+                            &nbsp;100% { <br>
+                                &nbsp;&nbsp;    color: blue;<br>
+                                &nbsp;}<br>
+                    }
+                </code>
+                </fieldset>
+        </section>
+        <section class="enhancements" id="enh3">
+            <h2>Responsiveness &#x1F4F2;</h2>
+            <p>A few decades ago the only devices using the internet were PCs and Laptops. Back at that time all monitors had similar displays with similar aspect ratios and sizes.
+                However, in the current future, the range of internet-capable devices are increasing everyday. Mobile phones, tablets and devices with different aspect ratios, sizes and 
+                resolutions are manufactured nowadays. This inconsistency in display sizes creates a problem while making web pages. Webpages that are only made for computers and Laptops
+                are displayed poorly on smaller devices like mobile phones; this is an issue as many consumers use their phones as their main device therefore, creating a webpage that is not
+                suitable for mobile phones might decrease the number of users who view the webpage.
+                <br><br>
+                We wanted to make our website suitable for any device. We accomplished this by using the CSS <code><strong>@media</strong></code> rule. The @media rule is used in media 
+                queries to apply different styles for different media types/devices. Media quries can be used to check the size of the viewport, device and also check the orientation 
+                and resolution of the device to apply specific CSS rules that best fit the device. Try resizing <a href="index.html"><strong>this</strong></a> page to see how it adapts to different window sizes!
+                <em>(Responsiveness was not applied to the enhancements.html page)</em>
+                <br><br>
+                How @media queries were applied: The way the CSS @media rule works is that it encloses a block of normal CSS but it <em>only</em> executes that CSS if the @media query selector
+                condition is satisfied. For example if our @media query selector was <code>(max-width: 500px)</code>, the CSS enclosed in the @media rule would execute if the width of the Screen
+                was less than 500px. So, we applied this logic and set many @media query selectors from the range of 540px to 1530px of screen width to accomodate most of the differenty types of 
+                devices people use nowadays.
+            </p>
+        </section>
+    </div>
+
+
+    <?php
+        include("footer.inc");
+    ?>
+</body>
+</html>
